@@ -1,272 +1,588 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Technical consultant with expertise in API integration, cloud solutions, and cybersecurity. View my portfolio and contact me for innovative tech solutions.">
-    <meta name="keywords" content="technical consultant, API integration, cloud solutions, cybersecurity, IT consultant, portfolio">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Technical Consultant Portfolio | Innovative Tech Solutions</title>
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Samik's
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-                </h1>
-            </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-list" id="nav-list">
-                <li><a href="#home" title="Go to home">Home</a></li>
-                <li><a href="#about" title="Learn more about me">About</a></li>
-                <li><a href="#services" title="Explore my services">Services</a></li>
-                <li><a href="#portfolio" title="View my portfolio">Portfolio</a></li>
-                <li><a href="#contact" title="Get in touch with me">Contact</a></li>
-                <li><a href="#videos" title="Get in touch with me">Videos</a></li>
-            </ul>
-            <a href="#contact" class="cta" title="Contact me for tech solutions">Get in Touch</a>
-        </nav>
-    </header>
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-    <!-- Hero Section -->
-    <section id="home" class="hero" aria-label="Hero Section">
-        <div class="hero-content">
-            <h1>Helping Businesses Thrive with Innovative Tech Solutions</h1>
-            <p>Specializing in API Integration, Cloud Solutions, and Cybersecurity.</p>
-            <a href="#portfolio" class="cta" title="Explore my portfolio">Explore My Work</a>
-        </div>
-    </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <!-- About Section -->
-    <section id="about" aria-label="About Me">
-        <div class="container">
-            <h2>About Me</h2>
-            <article>
-                <p>
-                    With over 12+ years of experience<br/>
-✔️ Helping customers to implement Cloud Security at scale prima facia Microsoft Sentinel 🛡️ 🐱‍👤<br/>
-✔️ Advocates Microsoft Security Education and awareness.<br/>
-✔️ Love Building Open-Source ATOM Products. <br/>
+/* Header Styles */
+header {
+    background: #299;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-📌 During my journey, I enjoy educating: <br/>
-💡 FREE Udemy Course with 2K+ enrollments<br/>
-💡 Presented in 30+ Cloud Security Events.<br/>
-💡 10+ Articles with 10K+ reads.<br/>
-📌 Love building atom products<br/>
-🔼 PowerShell Module on Defender for IOT Raw Logs.<br/>
-🔼 Enrich Sentinel with Twitter TI Feeds.<br/>
-🔼 Latest IP Ranges from Azure | GCP | AWS for Microsoft Sentinel<br/>
-Things came along with the journey<br/>
-⚡ #5 under top contributors for Microsoft Sentinel.<br/>
-⚡ L5 Microsoft Sentinel Black Belt since 2022<br/>
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-📍 Been engaged in the design & development of applications in Azure, GCP.
-A veteran developer for .NET & SharePoint.<br/>
-                </p>
-            </article>
-        </div>
-    </section>
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-    <!-- Services Section -->
- <section id="services" class="services-section" aria-label="Services">
-    <div class="container">
-        <h2>Our Services</h2>
-        <p class="section-description">
-            We offer a range of services tailored to your needs. Whether you're looking for cloud solutions, API integration, or cybersecurity, we have the expertise to help you succeed.
-        </p>
-        <div class="services-grid">
-            <!-- Service Card 1 -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <img src="path/to/cloud-icon.png" alt="Cloud Services Icon">
-                </div>
-                <h3>Cloud Solutions</h3>
-                <p>Leverage the power of cloud computing to scale your business and increase efficiency.</p>
-                <ul class="service-benefits">
-                    <li>Scalable infrastructure</li>
-                    <li>Cost-effective solutions</li>
-                    <li>24/7 support and monitoring</li>
-                </ul>
-                <a href="#" class="cta" title="Learn more about Cloud Solutions">Learn More</a>
-            </div>
+header ul {
+    display: flex;
+    list-style: none;
+}
 
-            <!-- Service Card 2 -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <img src="path/to/api-icon.png" alt="API Services Icon">
-                </div>
-                <h3>API Integration</h3>
-                <p>Seamlessly integrate third-party APIs to automate workflows and enhance system efficiency.</p>
-                <ul class="service-benefits">
-                    <li>Custom API development</li>
-                    <li>Third-party integration</li>
-                    <li>Secure and scalable</li>
-                </ul>
-                <a href="#" class="cta" title="Learn more about API Integration">Learn More</a>
-            </div>
+header ul li {
+    margin: 0 15px;
+}
 
-            <!-- Service Card 3 -->
-            <div class="service-card">
-                <div class="icon-wrapper">
-                    <img src="path/to/security-icon.png" alt="Cybersecurity Services Icon">
-                </div>
-                <h3>Cybersecurity</h3>
-                <p>Protect your business from potential threats with our robust cybersecurity solutions.</p>
-                <ul class="service-benefits">
-                    <li>Threat detection & response</li>
-                    <li>Data encryption & protection</li>
-                    <li>Security audits & compliance</li>
-                </ul>
-                <a href="#" class="cta" title="Learn more about Cybersecurity">Learn More</a>
-            </div>
-        </div>
-    </div>
-</section>
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+header .cta {
+    background: #008cba;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+header .cta:hover {
+    background: #005f7c;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('bg.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero .cta {
+    background: #008cba;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero .cta:hover {
+    background: #005f7c;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+#about p {
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+    background-color: #f9f9f9;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    width: 22%;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 0.9em;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #fff;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f4f4f4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005f7c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer .social a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: #008cba;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    /* Services Section */
+    .service {
+        width: 45%;
+    }
+
+    /* Portfolio Section */
+    .project {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    /* Services Section */
+    .service {
+        width: 100%;
+    }
+
+    /* Portfolio Section */
+    .project {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .hero .cta {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    /* Services Section */
+    .service {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Portfolio Section */
+    .project {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer .social a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Video Section Styles */
+.video-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.video-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.video-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-item {
+    width: 30%;
+    text-align: center;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Responsive Styles for Videos */
+@media screen and (max-width: 1024px) {
+    .video-item {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-item {
+        width: 100%;
+    }
+
+    .video-item iframe {
+        height: 200px;
+    }
+}
 
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" aria-label="Portfolio">
-        <section id="portfolio" class="portfolio-section" aria-label="Portfolio">
-            <div class="container">
-                <h2>Portfolio</h2>
-                <div class="portfolio-grid">
-                    <!-- Portfolio Card 1 -->
-                    <div class="portfolio-card">
-                        <div class="card-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Cloud Migration for Enterprise">
-                        </div>
-                        <div class="card-content">
-                            <h3>Cloud Migration for Enterprise</h3>
-                            <p>Seamlessly migrated a large-scale business to a cloud-native infrastructure, improving scalability and reducing operational costs.</p>
-                            <div class="card-footer">
-                                <a href="#" class="cta" title="View project details">View Details</a>
-                                <span class="tech-icons">
-                                    <img src="path/to/aws-icon.png" alt="AWS">
-                                    <img src="path/to/docker-icon.png" alt="Docker">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Portfolio Card 2 -->
-                    <div class="portfolio-card">
-                        <div class="card-image">
-                            <img src="https://via.placeholder.com/600x400" alt="API Integration for Fintech Startup">
-                        </div>
-                        <div class="card-content">
-                            <h3>API Integration for Fintech Startup</h3>
-                            <p>Integrated various payment gateways and third-party APIs for a fintech startup, ensuring secure and fast transactions for end-users.</p>
-                            <div class="card-footer">
-                                <a href="#" class="cta" title="View project details">View Details</a>
-                                <span class="tech-icons">
-                                    <img src="path/to/node-icon.png" alt="Node.js">
-                                    <img src="path/to/stripe-icon.png" alt="Stripe">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Portfolio Card 3 -->
-                    <div class="portfolio-card">
-                        <div class="card-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Cybersecurity Overhaul for E-commerce">
-                        </div>
-                        <div class="card-content">
-                            <h3>Cybersecurity Overhaul for E-commerce</h3>
-                            <p>Implemented robust cybersecurity measures, reducing vulnerabilities and improving data protection for a leading e-commerce platform.</p>
-                            <div class="card-footer">
-                                <a href="#" class="cta" title="View project details">View Details</a>
-                                <!--<span class="tech-icons">
-                                    <img src="path/to/security-icon.png" alt="Security">
-                                    <img src="path/to/azure-icon.png" alt="Azure">
-                                </span>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </section>
+/* Portfolio Section Styles */
+.portfolio-section {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+}
 
-    <!-- Video Section -->
-    <section id="videos" class="video-section" aria-label="Video Portfolio">
-    <div class="container">
-        <h2>Video Portfolio</h2>
-        <div class="video-grid">
-            <div class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7E3-WFnW1mc" title="Video 1 - API Integration Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>API Integration Overview</p>
-            </div>
-            <div class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7E3-WFnW1mc" title="Video 1 - API Integration Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>API Integration Overview</p>
-            </div>
-            <div class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7E3-WFnW1mc" title="Video 1 - API Integration Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>API Integration Overview</p>
-            </div>
-            <div class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7E3-WFnW1mc" title="Video 1 - API Integration Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>API Integration Overview</p>
-            </div>
-            <div class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Video 2 - Cloud Solutions Architecture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Cloud Solutions Architecture</p>
-            </div>
-            <div class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Video 3 - Cybersecurity Protocols" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Cybersecurity Protocols</p>
-            </div>
-        </div>
-    </div>
-</section>
+.portfolio-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" aria-label="Contact Me">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form action="submit.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+.portfolio-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+/* Portfolio Card Styles */
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
 
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #008cba;
+}
 
-    <!-- Footer -->
-    <footer aria-label="Footer">
-        <p>© 2024 TechConsultant. All Rights Reserved.</p>
-        <div class="social">
-            <a href="#" title="Follow me on LinkedIn">LinkedIn</a>
-            <a href="#" title="Check my projects on GitHub">GitHub</a>
-            <a href="#" title="Follow me on Twitter">Twitter</a>
-        </div>
-    </footer>
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 
-    <!-- JavaScript for Menu Toggle -->
-    <script async>
-        const menuToggle = document.querySelector('#mobile-menu');
-        const navList = document.querySelector('#nav-list');
+.card-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
 
-        menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
-    </script>
-</body>
-</html>
+.card-content p {
+    font-size: 1.1em;
+    color: #666;
+    flex-grow: 1;
+}
+
+.card-footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta {
+    background: #008cba;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta:hover {
+    background: #005f7c;
+}
+
+/* Technology Icons in the Footer */
+.tech-icons img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .portfolio-card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-card {
+        width: 100%;
+    }
+}
+
+/* Services Section Styles */
+.services-section {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.services-section .section-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Service Card Styles */
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.icon-wrapper img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* Service Title and Description */
+.service-card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Service Benefits List */
+.service-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 1.1em;
+}
+
+.service-benefits li {
+    margin-bottom: 10px;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #008cba;
+}
+
+/* Call-to-Action Button */
+.cta {
+    background: #008cba;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta:hover {
+    background: #005f7c;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .service-card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service-card {
+        width: 100%;
+    }
+}
